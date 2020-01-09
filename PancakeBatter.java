@@ -5,15 +5,15 @@ import java.util.*;
 public class PancakeBatter{
   int x;
   int y;
-  int r;
+  int d;
   boolean butter;
   public PancakeBatter(){
     x=0;
     y=0;
     butter = false;
   }
-  public PancakeBatter(int a, int b ,int rad,boolean g){
-    x=a;y=b;r=rad;butter=g;
+  public PancakeBatter(int a, int b ,int diam,boolean bo){
+    x=a;y=b;d=diam;butter=bo;
   }
   public void butterPlease(){
     butter=true;
@@ -24,10 +24,10 @@ public class PancakeBatter{
   public void makePancake(Graphics g){
     if (butter==true){
     g.setColor(new Color(255,248,197));
-    g.fillOval(x,y,r,r);
+    g.fillOval(x,y,d,d);
   }else{
     g.setColor(new Color(225,227,117));
-    g.fillOval(x,y,r,r);
+    g.fillOval(x,y,d,d);
 
   }
 }
